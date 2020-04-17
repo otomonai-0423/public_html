@@ -106,6 +106,17 @@
             }, 10);
         }
     }
+	 document.onkeydown = function(event) { 
+        if (event) {
+            if (event.keyCode == 32 || event.which == 32) {
+                if(status == 1) {
+                    stop();
+                } else if (status == 0) {
+                    start();
+                }
+            }
+        }
+    };
   </script>
   </body>
 </html>
